@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170331005753) do
+ActiveRecord::Schema.define(version: 20170331232832) do
+
+  create_table "user_interviews", force: :cascade do |t|
+    t.string   "companyname"
+    t.datetime "interviewdate"
+    t.string   "round"
+    t.string   "url"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["user_id"], name: "index_user_interviews_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "firstname"

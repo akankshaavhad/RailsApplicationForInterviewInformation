@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  companyname: MyString
+  interviewdate: 2017-03-31 23:28:32
+  round: MyString
+  url: MyString
+  user: one
+
+two:
+  companyname: MyString
+  interviewdate: 2017-03-31 23:28:32
+  round: MyString
+  url: MyString
+  user: two

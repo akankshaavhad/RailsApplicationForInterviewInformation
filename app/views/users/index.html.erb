@@ -1,0 +1,24 @@
+<h1>
+  Welcome,
+  <%= @user.firstname %></h1>
+<h1>Listing Interview</h1>
+
+<table border="1">
+  <tr>
+    <th>CompanyName</th>
+    <th>Interview Date</th>
+    <th>Round</th>
+    <th>Job Description</th>
+  </tr>
+ 
+  <% @user.user_interviews.each do |interview| %>
+    <tr>
+      <td><%= interview.companyname %></td>
+      <td><%= interview.interviewdate %></td>
+      <td><%= interview.round %></td>
+      <td><%= interview.url %></td>
+      <td><%= link_to 'Show', user_userinterview_path(@user, interview) %></td>
+      <td><%= link_to 'Edit', edit_user_userinterview_path(@user, interview) %></td>
+    </tr>
+  <% end %>
+</table>
