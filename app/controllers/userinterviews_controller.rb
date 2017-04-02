@@ -1,6 +1,6 @@
 class UserinterviewsController < ApplicationController
     def index
-        @userinterview=UserInterview.all
+        @userinterviews=UserInterview.all
     end
     
     def new
@@ -14,21 +14,29 @@ class UserinterviewsController < ApplicationController
     def create
         @user = User.find(session[:user_id])
         @userinterview = @user.user_interviews.create(userinterview_params)
-        redirect_to user_path(@user)
+        redirect_to '/users'
     end
      
+    def edit
+        @userinterview=UserInterview.find(params[:id])
+    end
+    
     def update
-        @user = User.find(session[:user_id])
-        
-        if @user.update(userinterview_params)
-            redirect_to @user
+       @userinterview=UserInterview.find(params[:id])
+        if @userinterview.update(userinterview_params)
+            redirect_to '/users'
         else
             render 'edit'
         end
     end
     
-    def edit
+    def destroy
+    @userinterview =UserInterview.find(params[:id])
+    @userinterview.destroy
+    
+    redirect_to '/users'
     end
+   
     
     private
     def userinterview_params

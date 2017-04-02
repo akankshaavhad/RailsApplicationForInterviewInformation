@@ -21,6 +21,12 @@
       <td><%= interview.url %></td>
       <td><%= link_to 'Show', user_userinterview_path(@user, interview) %></td>
       <td><%= link_to 'Edit', edit_user_userinterview_path(@user, interview) %></td>
+      <td>
+      <%= link_to 'destroy', 
+        user_userinterview_path(@user, interview),
+        method: :delete,
+        data: {confirm: 'Are you Sure?'} %>
+      </td>
     </tr>
   <% end %>
 </table>

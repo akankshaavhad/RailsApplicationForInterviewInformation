@@ -1,4 +1,27 @@
 <h1>Editing Interview</h1>
  
-<%= render 'form' %>
+<%= form_for @userinterview, url: user_userinterview_path  do |f|%>
+
+  <p>
+    <%= f.label :CompanyName %><br>
+    <%= f.text_field :companyname %>
+  </p>
+  <p>
+    <%= f.label :url,"Job Description URL" %><br>
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.label :interviewdate,"Interview Date" %><br>
+    <%= f.datetime_local_field :interviewdate %>
+  </p>
+   <p>
+    <%= f.label :"Round","Round" %><br>
+    <%= f.text_field :round %>
+  </p
+
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
  

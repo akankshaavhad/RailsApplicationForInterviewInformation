@@ -17,10 +17,6 @@ class UsersController < ApplicationController
             redirect_to '/signup' 
         end 
     end
-    
-    def user_interviews
-      #this will also fix the error you see, although it's fundamentally incorrect
-   end
    
     private
     def user_params
