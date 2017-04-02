@@ -1,6 +1,8 @@
 <h1>
   Welcome,
   <%= @user.firstname %></h1>
+  
+<%= link_to 'New Interview', new_user_userinterview_path(@user) %>   
 <h1>Listing Interview</h1>
 
 <table border="1">

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   resources :users do
-    resources :userinterviews
+  resources :userinterviews
   end
   
   root'welcome#index'

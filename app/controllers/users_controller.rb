@@ -18,6 +18,10 @@ class UsersController < ApplicationController
         end 
     end
     
+    def user_interviews
+      #this will also fix the error you see, although it's fundamentally incorrect
+   end
+   
     private
     def user_params
     params.require(:user).permit(:firstname, :lastname, :emailid,:username, :password)
