@@ -1,26 +1,22 @@
-<%= form_for(@user) do |f|%>
- <p>
-    <%= f.label :Hello %>
-     <%= @user.firstname %>
-  </p>
- <%= f.fields_for :user_interviews do |builder| %>
+<%= form_for @userinterview, url: user_userinterviews_path do |f|%>
+
   <p>
-    <%= builder.label :CompanyName %><br>
-    <%= builder.text_field :companyname %>
+    <%= f.label :CompanyName %><br>
+    <%= f.text_field :companyname %>
   </p>
   <p>
-    <%= builder.label :url,"Job Description URL" %><br>
-    <%= builder.text_field :url %>
+    <%= f.label :url,"Job Description URL" %><br>
+    <%= f.text_field :url %>
   </p>
   <p>
-    <%= builder.label :interviewdate,"Interview Date" %><br>
-    <%= builder.datetime_local_field :interviewdate %>
+    <%= f.label :interviewdate,"Interview Date" %><br>
+    <%= f.datetime_local_field :interviewdate %>
   </p>
    <p>
-    <%= builder.label :"Round","Round" %><br>
-    <%= builder.text_field :round %>
+    <%= f.label :"Round","Round" %><br>
+    <%= f.text_field :round %>
   </p
- <% end %>
+
   <p>
     <%= f.submit %>
   </p>
