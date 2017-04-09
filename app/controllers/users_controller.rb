@@ -9,10 +9,11 @@ class UsersController < ApplicationController
     end
     
     def create 
-     @user = User.new(user_params) 
-        if @user.save 
+     @user = User.new(user_params)
+        if @user.save
+            print "vdfvv"
             session[:user_id] = @user.id 
-            redirect_to '/' 
+            redirect_to @user 
         else 
             redirect_to '/signup' 
         end 
