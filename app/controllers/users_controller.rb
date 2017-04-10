@@ -13,7 +13,7 @@ class UsersController < ApplicationController
         if @user.save
             print "vdfvv"
             session[:user_id] = @user.id 
-            redirect_to @user 
+            redirect_to '/users' 
         else 
             redirect_to '/signup' 
         end 
