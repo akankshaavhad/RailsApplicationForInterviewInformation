@@ -8,11 +8,11 @@ class UserInterview < ApplicationRecord
   @@REMINDER_TIME = 5.minutes # minutes before appointment
 
   # Notify our appointment attendee X minutes before the appointment time
+    def reminder
     ENV['TWILIO_NUMBER'] = '+19803656325'
     ENV['TWILIO_ACCOUNT_SID']= 'AC42b26049da2a7e3556c17a940b75d163'
     ENV['TWILIO_AUTH_TOKEN'] = 'e099f1d5f14b1ddcfcf9376bafb5e3c5'
-    
-    def reminder
+     
     @twilio_number = ENV['TWILIO_NUMBER']
     @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
     
