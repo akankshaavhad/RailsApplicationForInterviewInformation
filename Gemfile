@@ -32,6 +32,16 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# Use delayed job for running background jobs
+# Use bootstrap themes
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'delayed_job'
+gem 'delayed_job_active_record'
+
+# Need daemons to start delayed_job
+gem 'daemons'
+# Use Twilio
+gem 'twilio-ruby'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

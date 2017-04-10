@@ -30,6 +30,7 @@ class UserinterviewsController < ApplicationController
         end
     end
     
+    
     def destroy
     @userinterview =UserInterview.find(params[:id])
     @userinterview.destroy
